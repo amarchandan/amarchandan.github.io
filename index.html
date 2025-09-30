@@ -592,15 +592,15 @@ $ cat ~/.contacts<br/><br/>
               line.classList.remove("typing");
               line.innerHTML = text;
               i++;
-              setTimeout(typeCommand, commands[i-1].type === "command" ? 1000 : 300);
-            }, 3000);
+              setTimeout(typeCommand, commands[i-1].type === "command" ? 100 : 30);
+            }, 300);
           } else {
             line.classList.add("typing");
             setTimeout(() => {
               line.classList.remove("typing");
               i++;
-              setTimeout(typeCommand, 300);
-            }, 3000);
+              setTimeout(typeCommand, 30);
+            }, 300);
           }
           terminalBody.appendChild(line);
           terminalBody.scrollTop = terminalBody.scrollHeight;
